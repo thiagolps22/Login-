@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login -->
+    <div class="form-container" id="login">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginSenha" placeholder="Senha">
+      <button onclick="fazerLogin()">Entrar</button>
+      <p>Não tem conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></p>
+    </div>
+
+    <!-- Cadastro -->
+    <div class="form-container hidden" id="cadastro">
+      <h2>Cadastro</h2>
+      <input type="text" id="cadNome" placeholder="Nome">
+      <input type="email" id="cadEmail" placeholder="Email">
+      <input type="password" id="cadSenha" placeholder="Senha">
+      <button onclick="fazerCadastro()">Cadastrar</button>
+      <p>Já tem conta? <a href="#" onclick="mostrarLogin()">Fazer login</a></p>
+    </div>
+
+    <!-- Painel CRUD -->
+    <div class="form-container hidden" id="painel">
+      <h2>Usuários</h2>
+      <input type="text" id="novoNome" placeholder="Nome">
+      <button onclick="criarUsuario()">Adicionar</button>
+      <ul id="listaUsuarios"></ul>
+      <button onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
